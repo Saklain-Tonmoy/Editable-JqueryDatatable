@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('table', [\App\Http\Controllers\EmployeeController::class, 'index']);
+Route::post('table/action', [\App\Http\Controllers\EmployeeController::class, 'action'])->name('table.action');
